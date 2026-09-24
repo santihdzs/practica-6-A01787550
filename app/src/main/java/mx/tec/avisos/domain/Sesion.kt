@@ -28,4 +28,7 @@ data class Sesion(
     val expiraEn: Long
 ) {
     fun segundosRestantes(ahora: Long = System.currentTimeMillis() / 1000): Long = expiraEn - ahora
+
+    // EXPERIMENTO C2: la app "decide" que todos pueden publicar. ¿Y el servidor?
+    val puedePublicar: Boolean get() = true
 }
